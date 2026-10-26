@@ -62,13 +62,6 @@ function shell({ title, description, active, body, home = false }) {
   return `<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#25272a"><meta name="robots" content="noindex,nofollow"><title>${title}</title><meta name="description" content="${description}"><meta property="og:type" content="website"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><link rel="stylesheet" href="/assets/style.css">${home ? '<link rel="preload" as="image" href="/assets/storefront.webp" fetchpriority="high">' : ''}${jsonLd}</head><body class="${home ? 'home' : 'interior'}">${header(active)}<main id="main">${body}</main>${footer()}<script src="/assets/site.js" defer></script></body></html>`;
 }
 
-const benefitCards = [
-  { num:'01',title:'独自の販路を活かした査定',text:'卸売・業販・オークションなどの販路を活かし、一台一台の価値を丁寧に見極めます。' },
-  { num:'02',title:'査定後の不当な減額なし',text:'ご契約後に一方的な理由で金額を変えるような対応はいたしません。' },
-  { num:'03',title:'無理な営業をしません',text:'査定のみ、売却時期が未定のご相談も歓迎です。しつこい電話営業は行いません。' },
-  { num:'04',title:'売却後までワンストップ',text:'中古車販売・修理・板金塗装・自動車保険まで、次のカーライフもご相談いただけます。' },
-];
-const benefitHtml = benefitCards.map(x=>`<article class="benefit-card"><span class="benefit-no">${x.num}</span><h3>${x.title}</h3><p>${x.text}</p></article>`).join('');
 
 const process = [
   ['01','LINEで査定のご相談','車種・年式など、お車の情報をLINEでお送りください。'],
@@ -125,10 +118,11 @@ const home = `
 <section class="section-pad faq-preview"><div class="container faq-preview-grid"><div><p class="eyebrow">06 / よくあるご質問</p><h2>ご相談の前に、<br>気になること。</h2><p>査定や売却のよくある質問をまとめています。</p><a class="text-link" href="/faq/">すべての質問を見る <span aria-hidden="true">→</span></a></div><div class="faq-list">${faqHtml(faq.slice(0,4))}</div></div></section>
 ${ctaBand()}`;
 
-const service = `${pageHero('BUYING SERVICE', '車買取・無料査定のご案内', '津島市を拠点に無料査定・出張査定に対応。お車の価値を丁寧に見極めます。')}
-<section class="section-pad"><div class="container statement-grid"><span class="eyebrow">FOR YOUR CAR</span><div><h2 class="section-large">「まずは価値を知りたい」<br>その気持ちからで大丈夫。</h2><p>車の売却には、価格だけでなく、タイミングや手続きへの不安もつきものです。当店では、お車の状態やお客様のご希望を伺いながら、納得できるお取引を目指します。</p><div class="chip-list"><span>普通車・軽自動車</span><span>ローン中の車</span><span>事故車・故障車</span><span>不動車・車検切れ</span><span>カスタム車</span></div></div></div></section>
-<section class="section-pad light-section"><div class="container">${sectionHeading('OUR STRENGTHS', '査定の安心を支える、4つの強み。')}<div class="benefit-grid">${benefitHtml}</div></div></section>
-<section class="section-pad"><div class="container narrow-block">${sectionHeading('SERVICE AREA', '津島市を中心に、近隣地域にも出張。', '津島市・愛西市・あま市・名古屋市中川区／港区・桑名市、その他近隣地域にも対応しています。')}<div class="area-banner"><span>無料出張査定について</span><p>出張が可能かどうかは地域・状況によりご案内します。LINEまたはお電話でお気軽にお問い合わせください。</p>${lineButton('出張査定を相談する')}</div></div></section>${ctaBand()}`;
+const service = `${pageHero('車買取・無料査定', '車買取・無料査定のご案内', '津島市を拠点に無料査定・出張査定をご相談いただけます。')}
+<section class="section-pad"><div class="container buying-opening"><div class="buying-copy"><p class="eyebrow">車を手放すとき、最初の相談</p><h2>「いくらになる？」から、<br>始めてください。</h2><p>車の売却には、価格だけでなく時期や書類への不安もあります。まだ売却を決めていなくても、お車の状態とご希望を伺いながら進めます。</p><div class="chip-list"><span>普通車・軽自動車</span><span>ローン中の車</span><span>事故車・故障車</span><span>不動車・車検切れ</span><span>カスタム車</span></div><a class="text-link" href="/assessment/">まずは無料査定を相談する <span aria-hidden="true">→</span></a></div><figure class="buying-photo"><img src="/assets/staff4.webp" alt="車の整備スペースに立つアップルワールド津島店のスタッフ" loading="lazy"></figure></div></section>
+<section class="section-pad light-section"><div class="container buying-guide"><div><p class="eyebrow">査定について</p><h2>気になる状況も、<br>そのままご相談を。</h2><p>お車の状態に応じた査定をご案内します。対応の可否や必要なお手続きは、内容を伺ってからお伝えします。</p></div><div class="buying-guide-list"><div><span>01</span><h3>ローンが残っている</h3><p>所有権の解除や残債のお手続きについてご案内します。</p></div><div><span>02</span><h3>車検切れ・動かない車</h3><p>出張査定を含め、ご相談いただけます。</p></div><div><span>03</span><h3>事故・故障・カスタムがある</h3><p>状態やパーツなどを確認しながら査定します。</p></div></div></div></section>
+<section class="section-pad"><div class="container process-grid"><div class="process-intro"><p class="eyebrow">売却までの流れ</p><h2>最初はLINEから。</h2><p>LINEでお車の情報をご連絡いただき、概算のご案内から実車査定へ進みます。</p><a class="text-link" href="/flow/">お手続きの詳細を見る <span aria-hidden="true">→</span></a></div><ol class="steps-list">${processHtml()}</ol></div></section>
+<section class="section-pad light-section"><div class="container narrow-block">${sectionHeading('出張査定', '津島市から周辺エリアへ。', '津島市・愛西市・あま市・名古屋市中川区／港区・桑名市などのご相談を受け付けています。')}<div class="area-banner"><span>出張査定も無料です</span><p>実際に出張可能な地域・日時については、LINEまたはお電話でご確認ください。</p>${lineButton('出張査定を相談する')}</div></div></section>${ctaBand()}`;
 
 const supportServices = [
  ['sales','01','中古車販売','次の一台も、同じ窓口で。','買取だけでなく、中古車の販売にも対応しています。ライフスタイルやご予算に合わせたお乗り換えについてご相談ください。'],
@@ -148,9 +142,9 @@ const store = `${pageHero('STORE & ACCESS', '店舗・スタッフ・アクセ�
 <section class="section-pad staff-gallery-section"><div class="container">${sectionHeading('MEET THE TEAM', 'スタッフのご紹介', '現在の公式サイトでご紹介している、アップルワールド津島店のスタッフ写真です。')}<div class="store-staff-grid"><figure><img src="/assets/staff1.webp" alt="女性スタッフ2名" loading="lazy"></figure><figure><img src="/assets/staff2.webp" alt="店舗スタッフ" loading="lazy"></figure><figure><img src="/assets/staff3.webp" alt="店舗スタッフ" loading="lazy"></figure><figure><img src="/assets/staff4.webp" alt="店舗スタッフ" loading="lazy"></figure></div></div></section>
 <section class="section-pad light-section"><div class="container area-layout"><div>${sectionHeading('VISITING AREA', '出張査定の対応エリア')}<p>津島市を拠点に、周辺地域のお客様にもご相談いただいています。記載以外の近隣地域についてもお問い合わせください。</p></div><div class="area-list"><span>津島市全域</span><span>愛西市</span><span>あま市</span><span>名古屋市中川区</span><span>名古屋市港区</span><span>桑名市</span><span>その他近隣地域</span></div></div></section>${ctaBand()}`;
 
-const assessment = `${pageHero('FREE ASSESSMENT', 'LINEで無料査定のご相談', '売るかどうか決める前でも大丈夫。お車の情報を送るだけでご相談を始められます。')}
-<section class="section-pad"><div class="container assessment-layout"><div class="assessment-main"><span class="eyebrow">START WITH LINE</span><h2>お車の情報を送って、<br>無料で査定相談。</h2><p>車種や年式などの情報をLINEでお送りいただくと、概算の査定額をご案内します。ご納得いただいてから実車査定へ進む流れです。</p><div class="assessment-actions">${lineButton('LINEで無料査定を始める')}${phoneButton()}</div><p class="fineprint">※ 最終的な買取価格は実車確認後にご案内します。</p></div><div class="assessment-aside"><h3>相談しやすい3つの理由</h3><ul><li><span>01</span><div><strong>出張も査定も無料</strong><p>対応エリア内の出張査定も無料です。</p></div></li><li><span>02</span><div><strong>無理な営業なし</strong><p>売却時期が決まっていなくてもご相談できます。</p></div></li><li><span>03</span><div><strong>ローン中も相談可能</strong><p>所有権や残債のお手続きもご案内します。</p></div></li></ul></div></div></section>
-<section class="section-pad light-section"><div class="container narrow-block">${sectionHeading('AFTER CONTACT', 'お問い合わせ後の流れ')}<ol class="steps-list compact">${processHtml()}</ol></div></section>${ctaBand('お電話でのご相談も受け付けています。','営業時間 10:00〜18:00 ／ 毎週木曜日定休')}`;
+const assessment = `${pageHero('LINEで無料査定', 'LINEで無料査定のご相談', '売却するか決める前でも大丈夫です。お車の情報をお知らせください。')}
+<section class="section-pad"><div class="container assessment-layout"><div class="assessment-main"><span class="eyebrow">LINE・お電話で受付</span><h2>わかる範囲の情報から、<br>査定のご相談を。</h2><p>車種や年式などをLINEでお知らせください。まずは概算をご案内し、必要に応じて実車査定へ進みます。</p><div class="assessment-actions">${lineButton('LINEで無料査定を始める')}${phoneButton()}</div><p class="fineprint">※ 最終的な買取価格は実車確認後にご案内します。</p></div><div class="assessment-aside"><h3>LINEでお知らせいただく内容の目安</h3><ul><li><span>01</span><div><strong>車種・年式</strong><p>わかる範囲で結構です。</p></div></li><li><span>02</span><div><strong>走行距離</strong><p>おおよその距離でもご相談できます。</p></div></li><li><span>03</span><div><strong>お車の状態とご希望</strong><p>売却時期が未定の場合も、その旨をお知らせください。</p></div></li></ul></div></div></section>
+<section class="section-pad light-section"><div class="container narrow-block">${sectionHeading('ご連絡後の流れ', 'お問い合わせ後のお手続き')}<ol class="steps-list compact">${processHtml()}</ol></div></section>${ctaBand('お電話でのご相談も受け付けています。','営業時間 10:00〜18:00 ／ 毎週木曜日定休')}`;
 
 const faqPage = `${pageHero('FAQ', '車買取に関するよくあるご質問', '初めての車売却も、気になることを一つずつ。')}
 <section class="section-pad"><div class="container faq-page-layout"><div><span class="eyebrow">QUESTIONS & ANSWERS</span><h2>査定・ご契約に<br>ついてのご質問</h2><p>掲載内容以外にも、気になることがありましたらお気軽にご連絡ください。</p></div><div class="faq-list">${faqHtml()}</div></div></section>${ctaBand()}`;
