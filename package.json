@@ -1,0 +1,10 @@
+{
+  "name": "appleworld-tsushima-renewal",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node --check build.mjs && node --check dist/assets/site.js"
+  }
+}
