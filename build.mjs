@@ -29,23 +29,23 @@ function sectionHeading(kicker, title, desc = '') {
   return `<div class="section-head"><span class="eyebrow">${kicker}</span><h2>${title}</h2>${desc ? `<p>${desc}</p>` : ''}</div>`;
 }
 function pageHero(kicker, title, lead) {
-  return `<section class="page-hero"><div class="container page-hero-inner"><div><span class="eyebrow eyebrow-light">${kicker}</span><h1>${title}</h1><p>${lead}</p></div><div class="page-hero-mark" aria-hidden="true">AW<span>TSUSHIMA</span></div></div></section>`;
+  return `<section class="page-hero"><div class="container page-hero-inner"><p class="page-crumb"><a href="/">ホーム</a><span aria-hidden="true"> / </span>${kicker}</p><div><span class="eyebrow">APPLE WORLD TSUSHIMA</span><h1>${title}</h1><p>${lead}</p></div></div></section>`;
 }
 function ctaBand(title = '査定のご相談は、LINE・お電話で。', lead = '売るかどうか決まっていなくても大丈夫です。査定だけでもお気軽にご相談ください。') {
-  return `<section class="cta-band"><div class="container cta-band-inner"><div><span class="eyebrow eyebrow-light">FREE ASSESSMENT</span><h2>${title}</h2><p>${lead}</p></div><div class="cta-band-actions">${lineButton()}${phoneButton()}</div></div></section>`;
+  return `<section class="cta-band"><div class="container cta-band-inner"><div><span class="eyebrow">ご売却のご相談</span><h2>${title}</h2><p>${lead}</p></div><div class="cta-band-actions">${lineButton()}${phoneButton()}</div></div></section>`;
 }
 function header(active) {
   const navItems = nav.map(([href, label, key]) => `<a href="${href}" ${active === key ? 'aria-current="page"' : ''}>${label}</a>`).join('');
-  return `<div class="utility-bar"><div class="container utility-inner"><span>ガレージ山田が運営する アップルワールド加盟店</span><div><span>営業時間 10:00–18:00 ｜ 木曜定休</span><a href="${phoneHref}">TEL ${phone}</a></div></div></div>
+  return `<a class="skip-link" href="#main">本文へ移動</a><div class="utility-bar"><div class="container utility-inner"><span>ガレージ山田運営 ／ アップルワールドFC加盟店</span><div><span>10:00–18:00・木曜定休</span><a href="${phoneHref}">TEL ${phone}</a></div></div></div>
   <header class="site-header" id="top"><div class="container header-inner">
-    <a class="brand" href="/" aria-label="アップルワールド津島店 トップ"><img src="${logoImage}" alt="アップルワールド ロゴ" width="48" height="63"><span><strong>アップルワールド</strong><small>津島店</small></span></a>
+    <a class="brand" href="/" aria-label="アップルワールド津島店 トップ"><img src="${logoImage}" alt="" width="48" height="63"><span><strong>アップルワールド</strong><small>津島店 <i>｜ TSUSHIMA</i></small></span></a>
     <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="main-nav" id="primary-nav" aria-label="メインナビゲーション">${navItems}</nav>
-    <a class="header-cta" href="/assessment/">無料査定はこちら <span aria-hidden="true">↗</span></a>
+    <a class="header-cta" href="/assessment/">無料査定を相談 <span aria-hidden="true">→</span></a>
   </div></header>`;
 }
 function footer() {
-  return `<footer class="footer"><div class="container"><div class="footer-main"><div class="footer-about"><div class="footer-brand">APPLE WORLD <span>TSUSHIMA</span></div><p>クルマを売るときも、その先のカーライフも。<br>地域に寄り添う、身近な相談先でありたい。</p><p class="operated">運営：ガレージ山田 ／ アップルワールドFC加盟店</p></div><div class="footer-links"><h3>サイト案内</h3><a href="/service/">車買取サービス</a><a href="/support/">中古車販売・修理など</a><a href="/flow/">買取の流れ</a><a href="/faq/">よくある質問</a><a href="/assessment/">無料査定</a></div><div class="footer-contact"><h3>アップルワールド津島店</h3><p>〒496-0019<br>${address}</p><p>10:00〜18:00 ／ 毎週木曜日定休</p><a class="footer-phone" href="${phoneHref}">${phone}</a><a class="footer-map" href="https://www.google.com/maps/search/?api=1&query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E6%B4%A5%E5%B3%B6%E5%B8%82%E7%99%BE%E5%B3%B6%E7%94%BA%E5%AD%97%E4%B8%89%E6%AD%A3%E5%85%AD%E6%AD%A929-2" target="_blank" rel="noopener noreferrer">Google マップで見る ↗</a></div></div><div class="footer-bottom"><span>© 2026 ガレージ山田 / アップルワールド津島店</span><span>愛知県津島市の車買取・カーライフサポート</span></div></div></footer>
+  return `<footer class="footer"><div class="container"><div class="footer-main"><div class="footer-about"><p class="footer-eyebrow">TSUSHIMA / AICHI</p><div class="footer-brand">アップルワールド<span>津島店</span></div><p>クルマのことを、地元で相談できる場所へ。</p><p class="operated">運営：ガレージ山田<br>アップルワールドFC加盟店</p></div><div class="footer-links"><h3>ご案内</h3><a href="/service/">車買取・無料査定</a><a href="/support/">中古車販売・修理・板金・保険</a><a href="/flow/">買取までの流れ</a><a href="/faq/">よくある質問</a><a href="/assessment/">LINEで査定相談</a></div><div class="footer-contact"><h3>店舗情報</h3><p>〒496-0019<br>${address}</p><p>10:00〜18:00 ／ 毎週木曜日定休</p><a class="footer-phone" href="${phoneHref}">${phone}</a><a class="footer-map" href="https://www.google.com/maps/search/?api=1&query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E6%B4%A5%E5%B3%B6%E5%B8%82%E7%99%BE%E5%B3%B6%E7%94%BA%E5%AD%97%E4%B8%89%E6%AD%A3%E5%85%AD%E6%AD%A929-2" target="_blank" rel="noopener noreferrer">Google マップで見る ↗</a></div></div><div class="footer-bottom"><span>© 2026 Garage Yamada / Apple World Tsushima</span><span>愛知県津島市・百島町</span></div></div></footer>
   <div class="mobile-actions"><a href="${phoneHref}" class="mobile-phone">電話で相談</a><a href="${line}" target="_blank" rel="noopener noreferrer" class="mobile-line">LINEで無料査定 ↗</a></div>`;
 }
 function shell({ title, description, active, body, home = false }) {
@@ -59,7 +59,7 @@ function shell({ title, description, active, body, home = false }) {
     openingHoursSpecification: [{ '@type':'OpeningHoursSpecification', dayOfWeek:['Monday','Tuesday','Wednesday','Friday','Saturday','Sunday'], opens:'10:00', closes:'18:00'}],
     areaServed:['津島市','愛西市','あま市','名古屋市中川区','名古屋市港区','桑名市']
   })}</script>` : '';
-  return `<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#242a2d"><meta name="robots" content="noindex,nofollow"><title>${title}</title><meta name="description" content="${description}"><meta property="og:type" content="website"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/review.css">${home ? '<link rel="preload" as="image" href="/assets/staff2.webp" fetchpriority="high">' : ''}${jsonLd}</head><body class="${home ? 'home' : 'interior'}">${header(active)}<main id="main">${body}</main>${footer()}<script src="/assets/site.js" defer></script></body></html>`;
+  return `<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#25272a"><meta name="robots" content="noindex,nofollow"><title>${title}</title><meta name="description" content="${description}"><meta property="og:type" content="website"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><link rel="stylesheet" href="/assets/style.css">${home ? '<link rel="preload" as="image" href="/assets/storefront.webp" fetchpriority="high">' : ''}${jsonLd}</head><body class="${home ? 'home' : 'interior'}">${header(active)}<main id="main">${body}</main>${footer()}<script src="/assets/site.js" defer></script></body></html>`;
 }
 
 const benefitCards = [
@@ -90,14 +90,40 @@ const faq = [
 ];
 function faqHtml(items=faq){return items.map(([q,a])=>`<details class="faq-item"><summary>${q}<span class="plus" aria-hidden="true"></span></summary><div class="faq-answer">${a}</div></details>`).join('');}
 
-const home = `<section class="hero"><div class="container hero-layout"><div class="hero-copy"><p class="hero-local">愛知県津島市の車買取・無料査定</p><h1>車を売るなら、<br>まずは津島店に<br><em>ご相談ください。</em></h1><p class="hero-sub">査定だけでも、売却を迷っている段階でも大丈夫です。<br>ガレージ山田が運営するアップルワールド津島店が、直接お話を伺います。</p><div class="hero-actions">${lineButton('LINEで無料査定')}<a class="hero-phone" href="${phoneHref}"><span>お電話でのご相談</span><strong>${phone}</strong></a></div><a class="hero-more" href="/service/">車買取について詳しく知る ${arrow()}</a></div><figure class="hero-visual"><img src="/assets/staff2.webp" width="1848" height="1343" alt="アップルワールド津島店のスタッフ" fetchpriority="high"><figcaption><span>アップルワールド津島店</span><small>運営：ガレージ山田</small></figcaption></figure></div></section><div class="hero-facts"><div class="container hero-facts-inner"><div><strong>無料査定</strong><span>出張査定もご相談いただけます</span></div><div><strong>津島市百島町</strong><span>地域のお客様に向けた店舗</span></div><div><strong>10:00–18:00</strong><span>毎週木曜日 定休</span></div></div></div>
-<section class="intro-section section-pad"><div class="container intro-grid"><div>${sectionHeading('OUR PHILOSOPHY', '車の買取も、<br>乗り換えも、修理も。')}</div><div class="intro-right"><p class="lead-text">車買取から、中古車販売・修理・板金塗装・保険まで。</p><p>アップルワールド津島店は、ガレージ山田が運営するアップルワールドFC加盟店です。お客様の状況やご希望に寄り添い、車を手放すときも、次の車を選ぶときも、安心して相談できるお店を目指しています。</p><a class="text-link" href="/store/">店舗について知る ${arrow()}</a></div></div></section>
-<section class="section-pad services-section"><div class="container">${sectionHeading('WHAT WE DO', '車買取を中心に、<br>販売・修理・保険まで。', '車買取を中心に、カーライフに必要なサービスを幅広くご案内しています。')}<div class="service-grid"><a class="service-primary" href="/service/"><span class="service-label">MAIN SERVICE / 01</span><div><h3>中古車買取・無料査定</h3><p>一台一台、価値を丁寧に。査定だけでも、出張のご相談でも。</p><span class="circle-arrow" aria-hidden="true">↗</span></div></a><div class="service-secondary"><a href="/support/#sales"><span>02</span><h3>中古車販売</h3><p>乗り換えや次の一台のご相談</p><b aria-hidden="true">↗</b></a><a href="/support/#maintenance"><span>03</span><h3>修理・整備</h3><p>気になる不調から日々のメンテナンスまで</p><b aria-hidden="true">↗</b></a><a href="/support/#bodywork"><span>04</span><h3>板金塗装</h3><p>傷・へこみのご相談</p><b aria-hidden="true">↗</b></a><a href="/support/#insurance"><span>05</span><h3>自動車保険</h3><p>カーライフに合った保険のご相談</p><b aria-hidden="true">↗</b></a></div></div></div></section>
-<section class="section-pad strengths-section"><div class="container"><div class="strengths-top">${sectionHeading('WHY CHOOSE US', '査定で大切にしていること。')}<p>金額だけでなく、ご相談の段階からお引き渡しまで。対応の考え方をご案内します。</p></div><div class="benefit-grid">${benefitHtml}</div></div></section>
-<section class="people-section section-pad"><div class="container"><div class="people-head"><div>${sectionHeading('OUR PEOPLE', '津島店のスタッフを<br>ご紹介します。')}</div><div><p>アップルワールド津島店のスタッフです。初めての車売却でも、お客様の話を伺いながら丁寧にご案内します。</p><a class="text-link" href="/store/">スタッフ・店舗の紹介を見る ${arrow()}</a></div></div><div class="people-grid"><figure class="people-photo people-photo-wide"><img src="/assets/staff1.webp" alt="アップルワールド津島店の女性スタッフ2名" loading="lazy"></figure><figure class="people-photo"><img src="/assets/staff3.webp" alt="アップルワールド津島店のスタッフ" loading="lazy"></figure><figure class="people-photo"><img src="/assets/staff4.webp" alt="アップルワールド津島店のスタッフ" loading="lazy"></figure></div></div></section>
-<section class="process-section section-pad"><div class="container process-grid"><div class="process-intro">${sectionHeading('HOW IT WORKS', 'ご相談からお支払いまで。')}<p>最初のご相談からお振り込みまで、流れを明確にご案内します。</p><a class="text-link" href="/flow/">買取の流れを詳しく ${arrow()}</a></div><ol class="steps-list">${processHtml()}</ol></div></section>
-<section class="location-section"><div class="location-image"><img src="${storeImage}" alt="アップルワールド津島店の店舗外観" loading="lazy"></div><div class="location-panel"><span class="eyebrow eyebrow-light">VISIT OUR STORE</span><h2>津島市百島町にある<br>店舗です。</h2><p>津島市を拠点に、愛西市・あま市・名古屋市中川区／港区・桑名市など周辺地域の出張査定にも対応しています。</p><div class="location-address"><span>アップルワールド津島店</span><strong>〒496-0019<br>${address}</strong><small>営業時間 10:00〜18:00 ／ 木曜定休</small></div><a class="btn btn-outline-white" href="/store/">店舗・アクセスを見る ${arrow()}</a></div></section>
-<section class="section-pad faq-preview"><div class="container faq-preview-grid"><div>${sectionHeading('QUESTIONS', 'よくあるご質問')}<p>「まだ売るか決めていない」「ローンが残っている」など、気になることをまとめました。</p><a class="text-link" href="/faq/">よくある質問をすべて見る ${arrow()}</a></div><div class="faq-list">${faqHtml(faq.slice(0,4))}</div></div></section>${ctaBand()}`;
+const home = `
+<section class="hero">
+  <div class="container hero-grid">
+    <figure class="hero-photo"><img src="/assets/storefront.webp" width="1914" height="1210" alt="アップルワールド津島店の実際の店舗とスタッフ" fetchpriority="high"><figcaption>私たちの店舗とスタッフです。</figcaption></figure>
+    <div class="hero-message">
+      <span class="hero-local">愛知県津島市・百島町</span>
+      <h1>車を売る前に、<br><span>話してみませんか。</span></h1>
+      <p>売ると決めていなくても、査定だけでも。<br>津島市の実店舗で、お車のご相談をお受けしています。</p>
+      <div class="hero-actions">${lineButton('LINEで無料査定')}<a class="hero-call" href="${phoneHref}">電話で相談 <strong>${phone}</strong></a></div>
+      <p class="hero-note">運営：ガレージ山田 ／ アップルワールドFC加盟店</p>
+    </div>
+  </div>
+  <div class="container hero-bottom"><span>APPLE WORLD / TSUSHIMA</span><a href="/store/">店舗を詳しく見る <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="intro-strip"><div class="container intro-strip-inner"><strong>無料査定・出張査定のご相談受付中</strong><span>受付時間 10:00〜18:00 ／ 毎週木曜日定休</span><a href="/flow/">査定の流れを見る <span aria-hidden="true">→</span></a></div></section>
+<section class="section-pad offer-section"><div class="container">
+  <div class="offer-heading"><div><p class="eyebrow">01 / ご相談できること</p><h2>車買取から、<br>その先のカーライフまで。</h2></div><p>買取が中心の店舗ですが、乗り換え先の車探しや修理のご相談にも対応しています。お車のことを、ひとつの窓口で。</p></div>
+  <div class="offer-grid">
+    <a class="offer-main" href="/service/"><div class="offer-main-photo"><img src="/assets/garage-yamada-car.webp" alt="ガレージ山田で撮影した実車" loading="lazy"></div><div class="offer-main-body"><span class="offer-number">01 / メインサービス</span><h3>車買取・無料査定</h3><p>査定だけ、まだ迷っている、ローンが残っている。まずは状況をお聞かせください。</p><span class="offer-link">買取サービスの詳細 <span aria-hidden="true">→</span></span></div></a>
+    <div class="offer-list"><p class="offer-list-caption">ほかにも、こんなことをご相談いただけます。</p><a href="/support/#sales"><span>02</span><strong>中古車販売</strong><small>次の一台のご相談</small><b aria-hidden="true">↗</b></a><a href="/support/#maintenance"><span>03</span><strong>修理・整備</strong><small>日々のメンテナンスや不調</small><b aria-hidden="true">↗</b></a><a href="/support/#bodywork"><span>04</span><strong>板金塗装</strong><small>傷やへこみのご相談</small><b aria-hidden="true">↗</b></a><a href="/support/#insurance"><span>05</span><strong>自動車保険</strong><small>お車の保険のご相談</small><b aria-hidden="true">↗</b></a></div>
+  </div>
+</div></section>
+<section class="section-pad conversations-section"><div class="container">
+  <div class="conversations-grid"><div><p class="eyebrow">02 / 車を手放すとき</p><h2>こんなご相談からで、<br>大丈夫です。</h2><p>はじめての査定でも、お乗り換えを検討中でも。気になることを一緒に整理していきます。</p><a class="text-link" href="/faq/">ほかのご質問も見る <span aria-hidden="true">→</span></a></div>
+  <div class="conversation-list"><a href="/faq/"><span>Q.</span><strong>まだ売るか決めていないのですが？</strong><b aria-hidden="true">→</b></a><a href="/faq/"><span>Q.</span><strong>ローンが残っている車でも大丈夫？</strong><b aria-hidden="true">→</b></a><a href="/faq/"><span>Q.</span><strong>車検切れ・動かない車も相談できる？</strong><b aria-hidden="true">→</b></a><a href="/faq/"><span>Q.</span><strong>査定だけでも無料ですか？</strong><b aria-hidden="true">→</b></a></div></div>
+</div></section>
+<section class="section-pad people-section"><div class="container">
+  <div class="people-heading"><div><p class="eyebrow">03 / お店の人たち</p><h2>お話を伺うのは、<br>ここで働く私たちです。</h2></div><p>写真はアップルワールド津島店のスタッフ。スタッフの顔が見える地元の店舗として、お車のご相談をお待ちしています。</p></div>
+  <div class="people-editorial"><figure class="people-feature"><img src="/assets/staff2.webp" alt="アップルワールド津島店の男性スタッフ" loading="lazy"><figcaption>津島店のスタッフ</figcaption></figure><div class="people-side"><figure><img src="/assets/staff1.webp" alt="アップルワールド津島店の女性スタッフ2名" loading="lazy"><figcaption>店舗スタッフ</figcaption></figure><a href="/store/">スタッフと店舗のご紹介 <span aria-hidden="true">→</span></a></div></div>
+</div></section>
+<section class="section-pad process-section"><div class="container process-grid"><div class="process-intro"><p class="eyebrow">04 / 売却の流れ</p><h2>ご相談から、<br>お支払いまで。</h2><p>LINEでのご相談から実車査定、お引き取りまで。流れをご案内します。</p><a class="text-link" href="/flow/">詳しい流れを見る <span aria-hidden="true">→</span></a></div><ol class="steps-list">${processHtml()}</ol></div></section>
+<section class="section-pad visit-section"><div class="container visit-grid"><div class="visit-text"><p class="eyebrow">05 / 店舗へのアクセス</p><h2>津島市百島町の、<br>このお店です。</h2><p>アップルワールド津島店<br>〒496-0019 ${address}</p><dl><div><dt>営業時間</dt><dd>10:00〜18:00</dd></div><div><dt>定休日</dt><dd>毎週木曜日</dd></div><div><dt>電話番号</dt><dd><a href="${phoneHref}">${phone}</a></dd></div></dl><a class="text-link" href="/store/">アクセスと出張査定エリア <span aria-hidden="true">→</span></a></div><figure class="visit-image"><img src="/assets/storefront.webp" alt="アップルワールド津島店の外観" loading="lazy"></figure></div></section>
+<section class="section-pad faq-preview"><div class="container faq-preview-grid"><div><p class="eyebrow">06 / よくあるご質問</p><h2>ご相談の前に、<br>気になること。</h2><p>査定や売却のよくある質問をまとめています。</p><a class="text-link" href="/faq/">すべての質問を見る <span aria-hidden="true">→</span></a></div><div class="faq-list">${faqHtml(faq.slice(0,4))}</div></div></section>
+${ctaBand()}`;
 
 const service = `${pageHero('BUYING SERVICE', '車買取・無料査定のご案内', '津島市を拠点に無料査定・出張査定に対応。お車の価値を丁寧に見極めます。')}
 <section class="section-pad"><div class="container statement-grid"><span class="eyebrow">FOR YOUR CAR</span><div><h2 class="section-large">「まずは価値を知りたい」<br>その気持ちからで大丈夫。</h2><p>車の売却には、価格だけでなく、タイミングや手続きへの不安もつきものです。当店では、お車の状態やお客様のご希望を伺いながら、納得できるお取引を目指します。</p><div class="chip-list"><span>普通車・軽自動車</span><span>ローン中の車</span><span>事故車・故障車</span><span>不動車・車検切れ</span><span>カスタム車</span></div></div></div></section>
