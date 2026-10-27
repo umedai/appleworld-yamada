@@ -22,6 +22,8 @@ for (const slug of pages) {
   if (!html.includes('id="main"')) issues.push(`${label}: missing main landmark`);
   if (!html.includes('tel:0567694600') || !html.includes('line.me/R/ti/p/@329fogkk')) issues.push(`${label}: missing contact CTA`);
   if (/あま七宝店/.test(html)) issues.push(`${label}: incorrect store name`);
+  if (/ガレージ山田|Garage Yamada|FC加盟店|FC加盟/.test(html)) issues.push(`${label}: unsupported operator or franchise wording`);
+  if (/garage-yamada/i.test(html)) issues.push(`${label}: old operator name in asset path`);
   if (/storefront\.webp/.test(html)) issues.push(`${label}: old storefront image must not appear`);
   if (!html.includes('愛知県津島市百島町字三正六歩29-2')) issues.push(`${label}: confirmed current street address missing`);
 

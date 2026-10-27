@@ -82,7 +82,6 @@ h2 { font-size: clamp(29px,3.2vw,42px); }
 .hero-actions { display: flex; gap: 18px; flex-direction: column; align-items: start; }
 .hero-call { display: inline-flex; align-items: baseline; gap: 15px; color: #272d2f; font-size: 12px; font-weight: 800; border-bottom: 1px solid #a9adab; padding-bottom: 5px; }
 .hero-call strong { font-family: Arial,sans-serif; font-size: 20px; letter-spacing: .02em; }
-.hero-note { color: #555c5e; font-size: 10.5px; line-height: 1.7; margin: auto 0 0; padding-top: 22px; }
 .hero-bottom { display: flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 59px; border-top: 1px solid var(--line); font-family: Arial,sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .03em; }
 .hero-bottom-label { letter-spacing: .13em; color: var(--brand-deep); }
 .hero-bottom a { font-family: inherit; letter-spacing: 0; }
@@ -268,7 +267,6 @@ h2 { font-size: clamp(29px,3.2vw,42px); }
 .store-image img { width: 100%; aspect-ratio: 1.2; object-fit: cover; object-position: center 50%; }
 .store-image figcaption { font-size: 11px; padding: 11px 17px; }
 .store-info h2 { font-size: 37px; margin: 0 0 19px; }
-.operated-label { color: var(--brand-deep); font-size: 12px; font-weight: 800; margin: 0 0 22px; }
 .store-info dl { margin: 0 0 25px; border-top: 1px solid var(--line); }
 .store-info dl > div { display: grid; grid-template-columns: 90px 1fr; gap: 13px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
 .store-info dt { color: var(--muted); font-weight: 700; }
@@ -306,7 +304,6 @@ h2 { font-size: clamp(29px,3.2vw,42px); }
 .footer-brand { font-size: 22px; line-height: 1.35; font-weight: 800; }
 .footer-brand span { display: block; font-size: 16px; color: #efb6be; }
 .footer-about p { font-size: 12px; color: #d5dbd9; margin: 20px 0 0; }
-.footer-about .operated { font-size: 11px; color: #a6b1ae; margin-top: 32px; }
 .footer h3 { font-size: 14px; margin: 0 0 21px; }
 .footer-links { display: flex; flex-direction: column; align-items: start; }
 .footer-links a { font-size: 12px; color: #d7ddda; margin-bottom: 12px; }
