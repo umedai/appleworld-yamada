@@ -101,7 +101,7 @@ function faqHtml(items=faq){return items.map(([q,a])=>`<details class="faq-item"
 const home = `
 <section class="hero"><div class="container hero-grid">
   <div class="hero-message"><span class="hero-local">愛知県津島市の車買取・無料査定</span><h1>車を売るなら、<br>まずは<span>話してみる。</span></h1><p>査定だけでも、売却を迷っている段階でも。<br>ガレージ山田が運営する津島店が、直接お話を伺います。</p><div class="hero-actions">${lineButton('LINEで無料査定')}<a class="hero-call" href="${phoneHref}">電話で相談 <strong>${phone}</strong></a></div><p class="hero-note">ガレージ山田運営 ／ アップルワールドFC加盟店</p></div>
-  <figure class="hero-photo"><img src="/assets/staff2.webp" width="1848" height="1343" alt="アップルワールド津島店のスタッフが笑顔で立つ写真" fetchpriority="high"><figcaption><span class="hero-portrait-tag">STAFF PHOTO</span><span>アップルワールド津島店のスタッフです</span></figcaption></figure>
+  <figure class="hero-photo"><img src="/assets/staff2.webp" width="1848" height="1343" alt="アップルワールド津島店のスタッフが笑顔で立つ写真" fetchpriority="high"><figcaption>アップルワールド津島店のスタッフです</figcaption></figure>
 </div><div class="container hero-bottom"><span class="hero-bottom-label">TSUSHIMA CAR SHOP</span><span>無料査定・出張査定のご相談を受付中</span><a href="/service/">車買取サービスへ <span aria-hidden="true">→</span></a></div></section>
 <section class="section-pad offer-section"><div class="container">
   <div class="offer-heading"><div><p class="eyebrow">01 / ご相談できること</p><h2>売却も、その先も。<br>クルマの相談窓口。</h2></div><p>車買取を中心に、次の一台探しから修理・保険まで。お車のことを、同じお店でご相談いただけます。</p></div>
