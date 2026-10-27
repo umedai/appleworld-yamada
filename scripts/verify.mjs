@@ -22,7 +22,7 @@ for (const slug of pages) {
   if (!html.includes('id="main"')) issues.push(`${label}: missing main landmark`);
   if (!html.includes('tel:0567694600') || !html.includes('line.me/R/ti/p/@329fogkk')) issues.push(`${label}: missing contact CTA`);
   if (/あま七宝店/.test(html)) issues.push(`${label}: incorrect store name`);
-  if (/・+\s*(?:百島町.*あま七宝)/.test(html)) issues.push(`${label}: inconsistent address`);
+  if (/百島町|496-0019|storefront\.webp/.test(html)) issues.push(`${label}: outdated storefront or address must not appear`);
 
   for (const match of html.matchAll(/<(a|img|link|script)\b[^>]*?\b(?:href|src)="([^"]+)"/g)) {
     const [tag, url] = [match[1], match[2]];
@@ -44,6 +44,12 @@ for (const slug of pages) {
     issues.push(`${label}: placeholder link`);
   }
 }
+const homeHtml = readFileSync(join(root,'index.html'),'utf8');
+const flowHtml = readFileSync(join(root,'flow','index.html'),'utf8');
+if (!homeHtml.includes('src="/assets/staff2.webp"')) issues.push('home: expected approved staff portrait in hero');
+if (!homeHtml.includes('class="journey-track"')) issues.push('home: missing illustrated buying journey');
+if ([...homeHtml.matchAll(/class="journey-icon"/g)].length !== 4) issues.push('home: expected 4 illustrated journey steps');
+if ([...flowHtml.matchAll(/class="flow-symbol"/g)].length !== 4) issues.push('flow: expected 4 illustrated process steps');
 const style = readFileSync(join(root,'assets/style.css'), 'utf8');
 if (!style.includes(':focus-visible')) issues.push('missing visible keyboard focus styling');
 if (!style.includes('prefers-reduced-motion')) issues.push('missing reduced-motion styles');
