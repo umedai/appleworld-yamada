@@ -22,7 +22,8 @@ for (const slug of pages) {
   if (!html.includes('id="main"')) issues.push(`${label}: missing main landmark`);
   if (!html.includes('tel:0567694600') || !html.includes('line.me/R/ti/p/@329fogkk')) issues.push(`${label}: missing contact CTA`);
   if (/あま七宝店/.test(html)) issues.push(`${label}: incorrect store name`);
-  if (/百島町|496-0019|storefront\.webp/.test(html)) issues.push(`${label}: outdated storefront or address must not appear`);
+  if (/storefront\.webp/.test(html)) issues.push(`${label}: old storefront image must not appear`);
+  if (!html.includes('愛知県津島市百島町字三正六歩29-2')) issues.push(`${label}: confirmed current street address missing`);
 
   for (const match of html.matchAll(/<(a|img|link|script)\b[^>]*?\b(?:href|src)="([^"]+)"/g)) {
     const [tag, url] = [match[1], match[2]];

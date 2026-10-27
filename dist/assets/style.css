@@ -168,6 +168,7 @@ h2 { font-size: clamp(29px,3.2vw,42px); }
 .contact-place { display: grid; grid-template-columns: 1fr .75fr; gap: 12%; align-items: center; }
 .contact-place h2 { margin: 0 0 24px; }
 .contact-place > div:first-child > p:not(.eyebrow) { font-size: 14px; color: var(--muted); margin-bottom: 28px; max-width: 520px; }
+.contact-address { font-style: normal; font-size: 15px; font-weight: 800; line-height: 1.8; margin: -7px 0 28px; padding-left: 15px; border-left: 3px solid var(--brand); }
 .contact-place-panel { background: #f0f2f0; border-radius: 120px 10px 10px 10px; min-height: 320px; padding: 54px 38px 34px; display: flex; flex-direction: column; align-items: start; }
 .contact-icon { display: grid; place-items: center; width: 66px; height: 66px; border-radius: 50%; padding: 16px; background: var(--brand); color: #fff; margin-bottom: 17px; }
 .contact-place-panel > div { display: flex; flex-direction: column; gap: 1px; margin-bottom: 19px; }
