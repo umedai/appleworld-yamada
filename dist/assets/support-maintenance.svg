@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" role="img" aria-labelledby="title desc">
+  <title id="title">修理・整備</title>
+  <desc id="desc">点検のためボンネットを開けた車とスパナ。修理・日常点検を表した説明イラスト。</desc>
+  <rect width="560" height="320" fill="#eef1ef"/>
+  <path d="M45 261H516" stroke="#cbd2ce" stroke-width="2"/>
+  <path d="M83 224 109 181q13-21 37-21h146q28 0 45 25l19 25 72 12q15 3 15 19v13H71v-15q0-10 12-15Z" fill="#fff" stroke="#30383b" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M148 169h145q22 0 35 20l13 21H106l18-26q10-15 24-15Z" fill="#d9e3e3" stroke="#30383b" stroke-width="3"/>
+  <path d="M236 170v41M106 210h232" stroke="#65797b" stroke-width="3"/>
+  <path d="M327 209 395 120" stroke="#30383b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M380 128 462 150l-4 13-94-15Z" fill="#f9fbfa" stroke="#30383b" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M347 218h60l17 17h-92Z" fill="#e4b5bc" stroke="#a92b3a" stroke-width="3"/>
+  <path d="M357 225h36m-19-7v14" stroke="#a92b3a" stroke-width="3"/>
+  <circle cx="145" cy="254" r="25" fill="#30383b"/><circle cx="145" cy="254" r="12" fill="#d9dfdc"/>
+  <circle cx="377" cy="254" r="25" fill="#30383b"/><circle cx="377" cy="254" r="12" fill="#d9dfdc"/>
+  <g transform="translate(73 47) rotate(-15 33 35)" fill="none" stroke="#a92b3a" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M33 19a24 24 0 0 0 24 31l-37 50a13 13 0 1 1-18-18l37-50a24 24 0 0 0-6-13Z"/>
+    <path d="m33 19 9 15 18-6"/>
+  </g>
+</svg>

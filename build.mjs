@@ -45,8 +45,8 @@ function sectionHeading(kicker, title, desc = '') {
 function pageHero(kicker, title, lead) {
   return `<section class="page-hero"><div class="container page-hero-inner"><p class="page-crumb"><a href="/">ホーム</a><span aria-hidden="true"> / </span>${kicker}</p><div><span class="eyebrow">APPLE WORLD TSUSHIMA</span><h1>${title}</h1><p>${lead}</p></div></div></section>`;
 }
-function ctaBand(title = '査定のご相談は、LINE・お電話で。', lead = '売るかどうか決まっていなくても大丈夫です。査定だけでもお気軽にご相談ください。') {
-  return `<section class="cta-band"><div class="container cta-band-inner"><div><span class="eyebrow">ご売却のご相談</span><h2>${title}</h2><p>${lead}</p></div><div class="cta-band-actions">${lineButton()}${phoneButton()}</div></div></section>`;
+function ctaBand(title = '査定のご相談は、LINE・お電話で。', lead = '売るかどうか決まっていなくても大丈夫です。査定だけでもお気軽にご相談ください。', options = {}) {
+  return `<section class="cta-band"><div class="container cta-band-inner"><div><span class="eyebrow">${options.eyebrow ?? 'ご売却のご相談'}</span><h2>${title}</h2><p>${lead}</p></div><div class="cta-band-actions">${lineButton(options.lineLabel ?? 'LINEで無料査定')}${phoneButton()}</div></div></section>`;
 }
 function header(active) {
   const navItems = nav.map(([href, label, key]) => `<a href="${href}" ${active === key ? 'aria-current="page"' : ''}>${label}</a>`).join('');
@@ -127,7 +127,9 @@ const supportServices = [
  ['insurance','04','自動車保険','もしもの備えまで、身近に。','自動車保険のご相談にも対応。お車に関することを一つの窓口でご相談いただけます。'],
 ];
 const support = `${pageHero('CAR LIFE SUPPORT', '販売・修理・板金・保険もご相談ください。', '中古車販売・修理・整備・板金塗装・自動車保険まで、幅広く対応します。')}
-<section class="section-pad"><div class="container"><div class="section-head centered"><span class="eyebrow">ONE STOP SERVICE</span><h2>お車に関するご相談を、<br>ひとつの窓口に。</h2><p>車買取から乗り換え・アフターサービスまで、アップルワールド津島店にご相談いただけます。</p></div><div class="support-list">${supportServices.map(([id,no,title,tagline,desc],i)=>`<article class="support-row" id="${id}"><span class="support-number">${no}</span><span class="support-symbol">${icon(['car','tool','paint','shield'][i])}</span><div><h3>${title}</h3><small>${tagline}</small></div><div><p>${desc}</p></div><a class="round-link" href="/assessment/" aria-label="${title}を相談する">↗</a></article>`).join('')}</div><div class="notice-note">※ 各サービスの対応内容や料金はお車の状態・ご相談内容により異なります。詳しくはお問い合わせください。</div></div></section>${ctaBand('売却も、乗り換えも。お気軽にご相談ください。','お車に関するお悩みを、まとめてご相談いただけます。')}`;
+<section class="section-pad"><div class="container"><div class="section-head centered"><span class="eyebrow">ONE STOP SERVICE</span><h2>お車に関するご相談を、<br>ひとつの窓口に。</h2><p>車買取から乗り換え・アフターサービスまで、アップルワールド津島店にご相談いただけます。</p></div>
+<div class="support-grid">${supportServices.map(([id,no,title,tagline,desc])=>`<article class="support-feature" id="${id}"><figure class="support-illustration"><img src="/assets/support-${id}.svg" width="560" height="320" loading="lazy" alt="${title}の内容を表すイラスト"></figure><div class="support-feature-copy"><div class="support-feature-title"><span class="support-number">${no}</span><h3>${title}</h3></div><p class="support-tagline">${tagline}</p><p class="support-description">${desc}</p><a class="text-link support-consult" href="${line}" target="_blank" rel="noopener noreferrer" aria-label="${title}についてLINEで相談する">LINEで相談する ${arrow()}</a></div></article>`).join('')}</div>
+<p class="notice-note">※ イラストは各サービスの内容を示すものです。対応内容や料金はお車の状態・ご相談内容により異なります。詳しくはお問い合わせください。</p></div></section>${ctaBand('売却も、乗り換えも。お気軽にご相談ください。','お車に関するお悩みを、まとめてご相談いただけます。',{eyebrow:'お車のご相談',lineLabel:'LINEで相談'})}`;
 
 const flow = `${pageHero('OUR PROCESS', '車買取のお取引の流れ', 'LINEでのご相談から実車査定、お支払いまで。4つのステップをご案内します。')}
 <section class="section-pad"><div class="container flow-layout"><div class="flow-sidebar"><span class="eyebrow">STEP BY STEP</span><h2>お取引の流れ</h2><p>ご納得いただいたうえでご契約いただけるよう、一つひとつ丁寧に進めます。</p>${lineButton('まずはLINEで相談')}</div><ol class="flow-steps">${process.map(([no,title,text],i)=>`<li><span class="flow-symbol">${icon(processIcons[i])}</span><div><span class="flow-count">STEP ${no}</span><h3>${title}</h3><p>${text}</p></div></li>`).join('')}</ol></div></section>

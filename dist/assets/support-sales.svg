@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" role="img" aria-labelledby="title desc">
+  <title id="title">中古車販売</title>
+  <desc id="desc">車のシルエットと引き渡すキー。次の一台を選ぶ場面を表した説明イラスト。</desc>
+  <rect width="560" height="320" fill="#eef1ef"/>
+  <path d="M48 256H512" stroke="#cbd2ce" stroke-width="2"/>
+  <path d="M73 211 97 169q12-22 42-22h165q25 0 43 23l25 33 48 11q14 4 14 20v17H65v-18q0-15 8-22Z" fill="#fff" stroke="#30383b" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M136 156h166q18 0 29 16l19 25H93l18-25q10-16 25-16Z" fill="#d9e3e3" stroke="#30383b" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M239 157v40M94 197h255" stroke="#65797b" stroke-width="3"/>
+  <path d="M81 217h40M370 217h34" stroke="#a92b3a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M164 226h56M262 226h33" stroke="#b5c0bc" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="141" cy="252" r="26" fill="#30383b"/><circle cx="141" cy="252" r="13" fill="#d9dfdc" stroke="#30383b" stroke-width="3"/>
+  <circle cx="359" cy="252" r="26" fill="#30383b"/><circle cx="359" cy="252" r="13" fill="#d9dfdc" stroke="#30383b" stroke-width="3"/>
+  <path d="M72 251h358" stroke="#30383b" stroke-width="3"/>
+  <g transform="translate(377 50) rotate(-18 48 40)">
+    <path d="M44 52 83 91l-8 8-13-13-7 7-13-13 7-7-13-13" fill="#e6b9bf" stroke="#a92b3a" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="37" cy="42" r="29" fill="#fff" stroke="#a92b3a" stroke-width="5"/>
+    <circle cx="37" cy="42" r="10" fill="#eef1ef" stroke="#a92b3a" stroke-width="4"/>
+  </g>
+</svg>

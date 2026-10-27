@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" role="img" aria-labelledby="title desc">
+  <title id="title">板金塗装</title>
+  <desc id="desc">車のドアパネルに塗装を吹き付けるスプレーガン。傷・へこみの補修を表す説明イラスト。</desc>
+  <rect width="560" height="320" fill="#eef1ef"/>
+  <path d="M49 263H511" stroke="#cbd2ce" stroke-width="2"/>
+  <path d="M74 217 112 165q11-15 34-15h143q23 0 38 16l34 41 39 7q16 3 16 18v23H64v-18q0-12 10-20Z" fill="#fff" stroke="#30383b" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M146 160h141q21 0 33 15l24 29H108l24-33q5-11 14-11Z" fill="#dbe5e5" stroke="#30383b" stroke-width="3"/>
+  <path d="M237 161v89M104 206h240M271 219h27" fill="none" stroke="#77898a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="135" cy="255" r="25" fill="#30383b"/><circle cx="135" cy="255" r="12" fill="#d9dfdc"/>
+  <circle cx="350" cy="255" r="25" fill="#30383b"/><circle cx="350" cy="255" r="12" fill="#d9dfdc"/>
+  <path d="M207 211q-12 12 0 24m14-26q-11 13-1 28m16-26q-8 10-1 21" fill="none" stroke="#a92b3a" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(370 62)" stroke="#30383b" stroke-width="4" stroke-linejoin="round">
+    <rect x="46" y="-6" width="35" height="36" rx="3" fill="#fff"/>
+    <path d="M28 35h70v25H78l-7 32H51L42 60H28Z" fill="#e4b5bc"/>
+    <path d="M46 47h-24l-14 7 14 7h19M54 60l-3 32h21l6-32" fill="#fff"/>
+    <path d="M43 71h-16" stroke="#a92b3a" stroke-width="5"/>
+  </g>
+  <g fill="none" stroke="#a92b3a" stroke-width="3" stroke-linecap="round">
+    <path d="m385 123-31 13m34 0-28 20m36-9-24 26" stroke-dasharray="4 10"/>
+  </g>
+</svg>

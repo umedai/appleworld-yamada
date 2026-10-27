@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" role="img" aria-labelledby="title desc">
+  <title id="title">自動車保険</title>
+  <desc id="desc">自動車とチェック項目の入った保険書類。補償についての相談を表す説明イラスト。</desc>
+  <rect width="560" height="320" fill="#eef1ef"/>
+  <path d="M49 263H511" stroke="#cbd2ce" stroke-width="2"/>
+  <path d="M64 211 90 169q12-20 36-20h132q25 0 42 22l22 29 38 8q13 4 13 19v25H55v-22q0-13 9-19Z" fill="#fff" stroke="#30383b" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M129 158h128q18 0 31 18l18 24H89l19-28q9-14 21-14Z" fill="#dce5e4" stroke="#30383b" stroke-width="3"/>
+  <path d="M203 160v41M97 201h208" stroke="#697c7f" stroke-width="3"/>
+  <circle cx="123" cy="251" r="25" fill="#30383b"/><circle cx="123" cy="251" r="12" fill="#d9dfdc"/>
+  <circle cx="298" cy="251" r="25" fill="#30383b"/><circle cx="298" cy="251" r="12" fill="#d9dfdc"/>
+  <g transform="translate(360 42)">
+    <path d="M13 2h111l31 31v201H13Z" fill="#fff" stroke="#30383b" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M124 2v31h31" fill="#dce5e4" stroke="#30383b" stroke-width="4"/>
+    <path d="M39 61h85M39 75h63" stroke="#8c9c9a" stroke-width="4" stroke-linecap="round"/>
+    <path d="m39 110 10 10 18-24M39 153l10 10 18-24M39 196l10 10 18-24" fill="none" stroke="#a92b3a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M84 113h40m-40 43h40m-40 43h40" stroke="#647375" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
